@@ -1,0 +1,22 @@
+
+#ifndef <%= classname.upcase %>_CLASS_HPP
+# define <%= classname.upcase %>_CLASS_HPP
+
+#include <iostream>
+
+class <%= classname %> {
+
+public:
+	<%= classname %>(void);
+	<%= classname %>(<%= classname %> const & rhs);
+	~<%= classname %>(void);
+
+	<%= classname %> &	operator=(<%=classname%> const & rhs);
+
+private:
+
+};
+
+std::ostream &	operator<<(std::ostream & o, <%= classname %> const & i);
+
+#endif

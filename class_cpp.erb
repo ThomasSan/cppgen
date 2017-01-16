@@ -1,0 +1,26 @@
+
+#include "<%= classname %>.class.hpp"
+
+<%= classname %>::<%= classname %>(void) {
+	return ;
+}
+
+<%= classname %>::<%= classname %>(<%= classname %> const & rhs) {
+	*this = rhs;
+}
+
+<%= classname %>::~<%= classname %>(void) {
+	return ;
+}
+
+<%= classname %> &	<%= classname %>::operator=(<%=classname%> const & rhs) {
+	if (this != &rhs) {
+		this->_foo = rhs.getFoo();
+	}
+	return *this;
+}
+
+std::ostream &	operator<<(std::ostream & o, <%= classname %> const & i) {
+	o << "<%= classname %> instance" << std::endl;
+	return o;
+}
